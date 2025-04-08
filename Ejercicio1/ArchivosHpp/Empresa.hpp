@@ -4,6 +4,8 @@
 
 class Departamento;
 
+//Composicion con CentralRegional
+
 class Empresa : public EntidadOrganizativa{
     private:
     vector<shared_ptr<Departamento>> departamentos; //ilimitado
