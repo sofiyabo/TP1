@@ -12,7 +12,9 @@ class Empresa : public EntidadOrganizativa{
 
     public:
     string direccion;
-    Departamento getDepByName(string);
-    vector<shared_ptr<Departamento>> getDepNames(); //ver como es de hacer un vector de departamentos si solo quiero los nombres
+
+    Empresa(){}
+    Departamento getDepByName(string nombre);
+    vector<string> getDepNames(); //ver como es de hacer un vector de departamentos si solo quiero los nombres
     
 };

@@ -20,7 +20,7 @@ class CentralRegional : public EntidadOrganizativa{
     //ver si override de Entidadorganizativo o no hace falta
     set<string> paises; //ilimitado, ordenados
 
-    CentralRegional::CentralRegional(){};
+    CentralRegional(){};
     int getCantEmpleados();
     vector<string> getEmpNames() const; //nombres de empresas!!
     vector<shared_ptr<GerenteAlto>> getGerentesAltos();

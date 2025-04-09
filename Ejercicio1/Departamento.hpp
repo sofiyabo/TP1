@@ -10,14 +10,15 @@ class Empleado;
 class Departamento{
     private:
     vector<shared_ptr<Empleado>> empleados;
-    int cantEmpleadosDepts; //estatico
+    static int cantEmpleadosDepts; 
 
     public:
     string nombre;
     string ubicacion;
 
-    int contarEmpleados(); //estatico
+    Departamento(){}
+    static int contarEmpleados(); 
     vector<shared_ptr<Empleado>> getEmployees();
-    bool contratarEmpleado(Empleado);
-    bool despedirEmpleado(Empleado);
+    bool contratarEmpleado(shared_ptr<Empleado>);
+    bool despedirEmpleado(shared_ptr<Empleado>);
 };

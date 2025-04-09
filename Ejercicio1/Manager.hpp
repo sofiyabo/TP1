@@ -8,7 +8,8 @@ class Manager : public Empleado{
     string level;
 
     public:
-    bool updateBono(float);
+    Manager(float b, string nivel) : bono(b), level(nivel){}
+    bool updateBono(float nuevo_bono);
     float getBono();
-    bool setLevel(string);
+    bool setLevel(string nivel);
 };

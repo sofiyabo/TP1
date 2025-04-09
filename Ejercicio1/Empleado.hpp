@@ -13,7 +13,9 @@ class Empleado{
     string nombre;
     string puesto;
 
+    Empleado(){}
+    Empleado(int ant, float sal, string nomb, string puest) : antiguedad(ant), salario(sal), nombre(nomb), puesto(puest){}
     int getAntiguedad();
-    bool updateSalario(float);
+    bool updateSalario(float salario_nuevo);
     float getSalario();
 };
