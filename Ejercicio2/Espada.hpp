@@ -10,5 +10,8 @@ class Espada : public ArmasdeCombate{
 
     public:
     void afilar();
+    string get_elemento();
+    void usar() override;
+    void mostrar_info() override;
 
 };

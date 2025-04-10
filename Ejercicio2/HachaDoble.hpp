@@ -11,5 +11,7 @@ class HachaDoble : public ArmasdeCombate{
     public:
     string get_filos();
     void afilar(); //como la potencia va bajando, necesita afilar
+    void usar() override;
+    void mostrar_info() override;
 
 };
