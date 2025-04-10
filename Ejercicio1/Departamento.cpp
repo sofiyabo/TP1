@@ -21,6 +21,7 @@ bool Departamento::contratarEmpleado(shared_ptr<Empleado> empleado){
         }
     }
     empleados.push_back(empleado);
+    cantEmpleadosDepts++;
     return true;
     //que no esta ya contratado
 }
