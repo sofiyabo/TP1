@@ -65,7 +65,13 @@ void LibrodeHechizos::usar_hechizo(){} //lo quiero? tendria que tener potencia p
 
 
 void Amuleto::usar_vida(shared_ptr<Personaje> personaje){
-    
+    if(auto guerrero = dynamic_pointer_cast<Guerreros>(personaje)){
+        if()
+    }else if
+    (auto mago = dynamic_pointer_cast<Guerreros>([personaje])){
+        mago->vida = guerrero->vida - potencia;
+    }
+    return;
 }
 
 void Amuleto::usar_potencia(shared_ptr<Personaje> personaje){}

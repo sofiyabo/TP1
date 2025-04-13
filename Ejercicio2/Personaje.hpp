@@ -16,7 +16,7 @@ class Personaje{
     virtual void GolpeFuerte(int potencia);
     virtual void DefensaYGolpe(int potencia);
     virtual void get_vida(); //NO IMPLEMENTADO
-
+    virtual void agregar_arma(shared_ptr<Arma> arma) = 0;
 };
 
 class Magos : public Personaje{
@@ -34,10 +34,11 @@ class Magos : public Personaje{
 
 
     Magos(string tipo, vector<shared_ptr<Arma>> armas_combate, vector<shared_ptr<Arma>> armas_magicas, int vida);
-    void agregar_arma(shared_ptr<Arma> arma);
+    void agregar_arma(shared_ptr<Arma> arma) override;
     void elegir_arma(string nombre); // pone al arma como arma actual
     string get_tipo();
     void mostrarInfo() override;
+    void agregar_arma(shared_ptr<Arma> arma) override;
     void GolpeRapido() override;
     void GolpeFuerte() override;
     void DefensaYGolpe() override;
@@ -58,10 +59,10 @@ class Guerreros : public Personaje{
     public:
     int vida;
 
-    void agregar_arma(shared_ptr<Arma> arma);
     void elegir_arma(string nombre);
     string get_nombre();
     void mostrarInfo() override;
+    void agregar_arma(shared_ptr<Arma> arma) override;
     void GolpeRapido() override;
     void GolpeFuerte() override;
     void DefensaYGolpe() override;
