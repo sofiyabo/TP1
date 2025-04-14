@@ -1,16 +1,12 @@
 #include "Arma.hpp"
 
-void ItemsMagicos::usar(shared_ptr<Personaje> enemigo) {
-    if(auto guerrero = dynamic_pointer_cast<Guerreros>(enemigo)){
-        guerrero->vida = guerrero->vida - potencia;
-    }else if
-    (auto mago = dynamic_pointer_cast<Guerreros>(enemigo)){
-        mago->vida = guerrero->vida - potencia;
-    }
+int ItemsMagicos::usar() {
+
     return;
 } 
+
 void ItemsMagicos::mostrar_info() {
-    cout<<
+
 } //de Arma
 
 string ItemsMagicos::get_nombre(){
@@ -25,16 +21,9 @@ int ItemsMagicos::get_cargaMaxima(){
     return cargaMaxima;
 }
 
-void ItemsMagicos::elegir_ataque(){}
 
-void ArmasdeCombate::usar(shared_ptr<Personaje> enemigo){
-    if(auto guerrero = dynamic_pointer_cast<Guerreros>(enemigo)){
-        guerrero->vida = guerrero->vida - potencia;
-    }else if
-    (auto mago = dynamic_pointer_cast<Guerreros>(enemigo)){
-        mago->vida = guerrero->vida - potencia;
-    }
-    return;
+int ArmasdeCombate::usar(){
+
 
 } //de Arma
 
@@ -44,7 +33,7 @@ string ArmasdeCombate::get_nombre(){
 
 void ArmasdeCombate::mostrar_info(){} //de Arma
 
-void ArmasdeCombate::restaurar(){}
+
 
 string Baston::get_elemento(){
     return elemento;
@@ -64,19 +53,13 @@ void LibrodeHechizos::cambiar_pagina(int pag){
 void LibrodeHechizos::usar_hechizo(){} //lo quiero? tendria que tener potencia particular
 
 
-void Amuleto::usar_vida(shared_ptr<Personaje> personaje){
-    if(auto guerrero = dynamic_pointer_cast<Guerreros>(personaje)){
-        if()
-    }else if
-    (auto mago = dynamic_pointer_cast<Guerreros>([personaje])){
-        mago->vida = guerrero->vida - potencia;
-    }
-    return;
+int Amuleto::usar_vida(){
+
 }
 
-void Amuleto::usar_potencia(shared_ptr<Personaje> personaje){}
+int Amuleto::usar_potencia(){}
 
-void Amuleto::usar_inmunidad(shared_ptr<Personaje> personaje){}
+bool Amuleto::usar_inmunidad(){}
 
 string Amuleto::get_tipo(){
     return tipo;
@@ -96,8 +79,8 @@ int Pocion::get_cantiadRestante(){
 
 void Espada::afilar(){}
 
-string Espada::get_elemento(){
-    return elemento;
+string Espada::get_filo(){
+    return tipoFilo;
 }
 
 
@@ -112,9 +95,8 @@ int Garrote::get_largo(){
 
 string HachaDoble::get_filos(){
     
-    string filos = "Filo 1: ", tipoFilo1, ", Filo 2: ", tipoFilo2<< ".\n"<< endl;
-    
-    return
+
+    return;
 }
 
 void HachaDoble::afilar(){}

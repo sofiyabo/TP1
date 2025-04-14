@@ -1,7 +1,6 @@
 #include "Personaje.hpp"
 
-Magos::Magos(string tipo, int vida) 
-: tipo(tipo), armas_combate{}, armas_magicas{}, vida(vida) {} //Las armas se van agregando en diferentes instancias, no al crear el objeto
+ //Las armas se van agregando en diferentes instancias, no al crear el objeto
 
 void Magos::agregar_arma(shared_ptr<Arma> arma){
     if(auto itemMagico = std::dynamic_pointer_cast<ItemsMagicos>(arma)){
@@ -37,14 +36,15 @@ void Magos::elegir_arma(string nombre){
 
 }
 
-string Magos::get_tipo(){
-    return tipo;
+string Magos::get_nombre(){
+    return nombre;
 }
 
 void Magos::mostrarInfo() {
-    cout<< "Tipo: " << tipo << ". Vida: " << vida << ". Arma actual: "<< arma_actual << endl;
+    cout<< "Nombre: " << nombre << ". Vida: " << vida << ". Arma actual: "<< arma_actual << endl;
 }
 
+/*
 void Magos::GolpeRapido() {
 
 }
@@ -57,6 +57,7 @@ void Magos::DefensaYGolpe(){
 
 }
 
+*/
 void Guerreros::agregar_arma(shared_ptr<Arma> arma){
     if(auto itemMagico = std::dynamic_pointer_cast<ItemsMagicos>(arma)){
         armas_magicas.push_back(arma);
@@ -99,6 +100,7 @@ void Guerreros::mostrarInfo() {
     cout<< "Nombre: " << nombre << ". Vida: " << vida << ". Arma actual: "<< arma_actual << endl;
 }
 
+/*
 void Guerreros::GolpeRapido(){
 
 }
@@ -107,3 +109,4 @@ void Guerreros::GolpeFuerte() {}
 
 void Guerreros::DefensaYGolpe() {}
 
+*/

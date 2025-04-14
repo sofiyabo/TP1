@@ -7,6 +7,7 @@ using namespace std;
 
 //le voy a pedir al usuario que ingrese los tipos de personajes y de armas
 int main(){
+    
     srand(time(nullptr)); //entender bien esto
 
     int cantMagos = 3 + (rand() % (7 - 3 + 1));    
