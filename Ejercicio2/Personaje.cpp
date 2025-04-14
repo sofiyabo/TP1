@@ -1,7 +1,7 @@
 #include "Personaje.hpp"
 
-Magos::Magos(string tipo, vector<shared_ptr<Arma>> armas_combate, vector<shared_ptr<Arma>> armas_magicas, int vida) 
-: tipo(tipo), armas_combate(armas_combate), armas_magicas(armas_magicas), vida(vida) {}
+Magos::Magos(string tipo, int vida) 
+: tipo(tipo), armas_combate{}, armas_magicas{}, vida(vida) {} //Las armas se van agregando en diferentes instancias, no al crear el objeto
 
 void Magos::agregar_arma(shared_ptr<Arma> arma){
     if(auto itemMagico = std::dynamic_pointer_cast<ItemsMagicos>(arma)){
@@ -100,7 +100,7 @@ void Guerreros::mostrarInfo() {
 }
 
 void Guerreros::GolpeRapido(){
-    
+
 }
 
 void Guerreros::GolpeFuerte() {}

@@ -70,21 +70,12 @@ shared_ptr<Arma> PersonajeFactory::crearArma(string tipo){
 
 }
 
-shared_ptr<Personaje> PersonajeFactory::crearPersonajeArmado(string tipo_personaje, string tipo_arma1 = 0, string tipo_arma2 = 0, string tipo_arma3 = 0){
+shared_ptr<Personaje> PersonajeFactory::crearPersonajeArmado(string tipo_personaje, vector<string> armas){
     shared_ptr<Personaje> personaje = crearPersonaje(tipo_personaje);
-    if(tipo_arma1 != 0){
-        shared_ptr<Arma> arma1 = crearArma(tipo_arma1);
-        personaje->agregar_arma(arma1)
-    }
-    if(tipo_arma2 != 0){
-        shared_ptr<Arma> arma1 = crearArma(tipo_arma2);
-        personaje->agregar_arma(tipo_arma2)
 
-    }
-    if(tipo_arma3 != 0){
-    shared_ptr<Arma> arma1 = crearArma(tipo_arma3);
-    personaje->agregar_arma(arma1)
-
+    for(const string& tipo_arma : armas){
+        shared_ptr<Arma> arma = crearArma(tipo_arma);
+        personaje->agregar_arma(arma)
     }
     return personaje;
 }

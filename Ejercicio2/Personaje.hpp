@@ -33,7 +33,7 @@ class Magos : public Personaje{
     public:
 
 
-    Magos(string tipo, vector<shared_ptr<Arma>> armas_combate, vector<shared_ptr<Arma>> armas_magicas, int vida);
+    Magos(string tipo, int vida);
     void agregar_arma(shared_ptr<Arma> arma) override;
     void elegir_arma(string nombre); // pone al arma como arma actual
     string get_tipo();
