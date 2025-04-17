@@ -12,7 +12,7 @@ class PersonajeFactory{
     public:
     static shared_ptr<Personaje> crearPersonaje(string tipo);
     static shared_ptr<Arma> crearArma(string tipo);
-    static shared_ptr<Personaje> crearPersonajeArmado(string tipo, string arma)
+    static shared_ptr<Personaje> crearPersonajeArmado(string tipo, vector<string> arma);
 
 };
 
